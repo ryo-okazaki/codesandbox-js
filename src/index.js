@@ -103,23 +103,22 @@ const func4 = (num1, num2) => {
 
 console.log(func4(10, 20));
 
-
 /**
  * 分割代入
  */
 const myProfile = {
-  name: 'ryo',
+  name: "ryo",
   age: 20,
 };
 
 const message10 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
 console.log(message10);
 
-const { name1, age1 } = myProfile
+const { name1, age1 } = myProfile;
 const message11 = `名前は${name1}です。年齢は${age1}です。`;
 console.log(message11);
 
-const myProfile1 = ['ryo', 20];
+const myProfile1 = ["ryo", 20];
 
 const message12 = `名前は${myProfile1[0]}です。年齢は${myProfile1[1]}です。`;
 console.log(message12);
@@ -128,9 +127,45 @@ const [name2, age2] = myProfile1;
 const message13 = `名前は${name2}です。年齢は${age2}です。`;
 console.log(message13);
 
-
 /**
  * デフォルト値、引数
  */
-const sayHello = (name10 = 'ゲスト') => console.log(`こんにちは!${name10}さん!`);
+const sayHello = (name10 = "ゲスト") =>
+  console.log(`こんにちは!${name10}さん!`);
 sayHello();
+
+/**
+ * スプレッド構文 ...
+ * 順番に処理をする
+ */
+// 配列の展開
+const arr1 = [1, 2];
+console.log(arr1);
+console.log(...arr1);
+
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+console.log(arr1[0], arr1[1]);
+console.log(...arr1);
+
+// まとめる
+const arr2 = [1, 2, 3, 4, 5];
+const [num10, num11, ...arr3] = arr2;
+console.log(num10);
+console.log(num11);
+console.log(arr3);
+
+// 配列のコピー、結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+const arr6 = [...arr4];
+console.log(arr6);
+
+const arr7 = [...arr4, ...arr5];
+console.log(arr7);
+
+// 配列を=でコピーする場合、参照元も影響を受けてしまう。
+const arr8 = arr4;
+arr8[0] = 100;
+console.log(arr8);
+console.log(arr4);
