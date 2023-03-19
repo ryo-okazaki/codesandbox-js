@@ -204,25 +204,45 @@ const newNameArr2 = nameArr.map((name) => {
 });
 console.log(newNameArr2);
 
-
 /**
  * 三項演算子
  */
 // ある条件 ? 条件がtrueの処理 : 条件がfalseの処理
-const val1 = 1 < 0 ? 'true' : 'false';
+const val1 = 1 < 0 ? "true" : "false";
 console.log(val1);
 
-const num30 = '1300';
+const num30 = "1300";
 console.log(num30.toLocaleString());
 
-const formattedNum = typeof num30 === 'number'
-  ? num30.toLocaleString()
-  : '数値を入力してください';
-  console.log(formattedNum);
-  
-  const checkSum = (num1, num2) => {
-    return num1 + num2 > 100
-      ? '100を超えています'
-      : '許容範囲内です';
-  }
-  console.log(checkSum(50, 40));
+const formattedNum =
+  typeof num30 === "number" ? num30.toLocaleString() : "数値を入力してください";
+console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+};
+console.log(checkSum(50, 40));
+
+/**
+ * 論理演算子の本当の意味 && ||
+ */
+// 一般的な使い方
+const flg1 = true;
+const flg2 = false;
+
+if (flg1 || flg2) {
+  console.log("1か2はtrueになります");
+}
+if (flg1 && flg2) {
+  console.log("1も2もtrueになります");
+}
+
+// || は左側がfalseなら右側を返す
+const num100 = null;
+const fee = num100 || "金額未設定です";
+console.log(fee);
+
+// && は左側がtrueなら右側を返す
+const num200 = null;
+const fee2 = num200 || "設定済みです";
+console.log(fee2);
