@@ -169,3 +169,39 @@ const arr8 = arr4;
 arr8[0] = 100;
 console.log(arr8);
 console.log(arr4);
+
+
+/**
+ * map、filterを使用した配列の処置
+ */
+// 従来
+const nameArr = ['田中', '山田', 'ryo'];
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(nameArr[index]);
+}
+
+// map
+const nameArr2 = nameArr.map((name) => {
+  return name
+});
+
+console.log(nameArr2);
+
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`))
+
+// filter
+const numArr = [1, 2, 3, 4, 5];
+const newNumarr = numArr.filter((num) => {
+  return num % 2 === 1;
+});
+console.log(newNumarr);
+
+
+const newNameArr2 = nameArr.map((name) => {
+  if (name === 'ryo') {
+    return name;
+  } else {
+    return `${name}さん`
+  }
+});
+console.log(newNameArr2);
