@@ -170,24 +170,23 @@ arr8[0] = 100;
 console.log(arr8);
 console.log(arr4);
 
-
 /**
  * map、filterを使用した配列の処置
  */
 // 従来
-const nameArr = ['田中', '山田', 'ryo'];
+const nameArr = ["田中", "山田", "ryo"];
 for (let index = 0; index < nameArr.length; index++) {
   console.log(nameArr[index]);
 }
 
 // map
 const nameArr2 = nameArr.map((name) => {
-  return name
+  return name;
 });
 
 console.log(nameArr2);
 
-nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`))
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
 
 // filter
 const numArr = [1, 2, 3, 4, 5];
@@ -196,12 +195,34 @@ const newNumarr = numArr.filter((num) => {
 });
 console.log(newNumarr);
 
-
 const newNameArr2 = nameArr.map((name) => {
-  if (name === 'ryo') {
+  if (name === "ryo") {
     return name;
   } else {
-    return `${name}さん`
+    return `${name}さん`;
   }
 });
 console.log(newNameArr2);
+
+
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの処理 : 条件がfalseの処理
+const val1 = 1 < 0 ? 'true' : 'false';
+console.log(val1);
+
+const num30 = '1300';
+console.log(num30.toLocaleString());
+
+const formattedNum = typeof num30 === 'number'
+  ? num30.toLocaleString()
+  : '数値を入力してください';
+  console.log(formattedNum);
+  
+  const checkSum = (num1, num2) => {
+    return num1 + num2 > 100
+      ? '100を超えています'
+      : '許容範囲内です';
+  }
+  console.log(checkSum(50, 40));
