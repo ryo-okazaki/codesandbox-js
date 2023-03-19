@@ -102,3 +102,35 @@ const func4 = (num1, num2) => {
 };
 
 console.log(func4(10, 20));
+
+
+/**
+ * 分割代入
+ */
+const myProfile = {
+  name: 'ryo',
+  age: 20,
+};
+
+const message10 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+console.log(message10);
+
+const { name1, age1 } = myProfile
+const message11 = `名前は${name1}です。年齢は${age1}です。`;
+console.log(message11);
+
+const myProfile1 = ['ryo', 20];
+
+const message12 = `名前は${myProfile1[0]}です。年齢は${myProfile1[1]}です。`;
+console.log(message12);
+
+const [name2, age2] = myProfile1;
+const message13 = `名前は${name2}です。年齢は${age2}です。`;
+console.log(message13);
+
+
+/**
+ * デフォルト値、引数
+ */
+const sayHello = (name10 = 'ゲスト') => console.log(`こんにちは!${name10}さん!`);
+sayHello();
