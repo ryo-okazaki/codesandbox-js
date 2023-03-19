@@ -35,13 +35,24 @@
 
 // constのオブジェクトは中身を書き換えられる
 // objectを定義するときはconstで定義するようにする
-const val4 = {
-  name: 'aaa',
-  age: 28,
-};
-console.log(val4);
-val4.name = 'bbbb';
-console.log(val4);
+// const val4 = {
+//   name: 'aaa',
+//   age: 28,
+// };
+// console.log(val4);
+// val4.name = 'bbbb';
+// console.log(val4);
 
-val4.aaa = 'ccc';
-console.log(val4);
+// val4.aaa = 'ccc';
+// console.log(val4);
+
+// 配列
+// constの配列は書き換え可能
+const val5 = ['dog', 'cat'];
+console.log(val5);
+
+val5[0] = 'bird';
+console.log(val5);
+
+val5.push('monkey');
+console.log(val5);
