@@ -23,12 +23,25 @@
 // // letは再宣言不可能
 // let val2 = 'letは再宣言不可能';
 
-const val3 = 'const変数';
-console.log(val3);
+// const val3 = 'const変数';
+// console.log(val3);
 
-// const変数は上書き不可能
-val3 = 'const変数上書き';
-console.log(val3);
+// // const変数は上書き不可能
+// val3 = 'const変数上書き';
+// console.log(val3);
 
-// const変数は再宣言不可能
-const val3 = 'const変数を再宣言';
+// // const変数は再宣言不可能
+// const val3 = 'const変数を再宣言';
+
+// constのオブジェクトは中身を書き換えられる
+// objectを定義するときはconstで定義するようにする
+const val4 = {
+  name: 'aaa',
+  age: 28,
+};
+console.log(val4);
+val4.name = 'bbbb';
+console.log(val4);
+
+val4.aaa = 'ccc';
+console.log(val4);
