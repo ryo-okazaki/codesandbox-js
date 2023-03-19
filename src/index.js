@@ -48,29 +48,57 @@
 
 // 配列
 // constの配列は書き換え可能
-const val5 = ['dog', 'cat'];
+const val5 = ["dog", "cat"];
 console.log(val5);
 
-val5[0] = 'bird';
+val5[0] = "bird";
 console.log(val5);
 
-val5.push('monkey');
+val5.push("monkey");
 console.log(val5);
 
 // reactの開発もほとんどconstを使っていく
 
-
 /**
  * テンプレート文字列
  */
-const name = 'ryo';
+const name = "ryo";
 const age = 28;
 // 「私の名前はryoです。年齢は28歳です。」
 
 // 従来の方法
-const message1 = '私の名前は' + name + 'です。年齢は' + age + 'です。';
+const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
 console.log(message1);
 
 // テンプレート文字列
 const message2 = `私の名前は${name}です。年齢は${age}です。`;
 console.log(message2);
+
+/**
+ * アロー関数
+ */
+// 従来の関数
+// function func1(str) {
+//   return str;
+// }
+
+const func1 = function (str) {
+  return str;
+};
+
+console.log(func1("func1です。"));
+
+// アロー関数
+const func2 = (str) => {
+  return str;
+};
+console.log(func2("func2です。"));
+
+// 1行で終わる場合はreturnを省略できる
+const func3 = (str) => str;
+
+const func4 = (num1, num2) => {
+  return num1 + num2;
+};
+
+console.log(func4(10, 20));
